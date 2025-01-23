@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Syncopate:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  background-image: url("images/ciri.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+header nav {
+  position: absolute;
+  right: 9%;
+  top: 3%;
+  font-size: 5rem;
+  padding: 15px;
+}
+
+header hgroup {
+  position: absolute;
+  top: 56%;
+  left: 4%;
+  font-family: "Syncopate", serif;
+}
+
+header h1 {
+  font-size: 4rem;
+  color: rgb(0, 104, 61);
+  max-width: 80%;
+  text-shadow: 1px 2px rgb(0, 165, 151);
+}
+
+header h3 {
+  font-size: 1.5rem;
+  color: rgb(77, 0, 0);
+  padding-left: 2%;
+  text-shadow: 1px 1px rgb(199, 0, 0);
+}
+
+main {
+  height: 100vh;
+  background-color: rgb(39, 39, 39);
+  margin-top: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+article {
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+}
+
+article img {
+  max-width: 400px;
+  border-radius: 22px;
+}
+
+article p {
+  font-size: 4rem;
+  color: bisque;
+}
+
+.drop-menu {
+  display: none; /* Hidden by default */
+  background-color: #363535;
+  border: 1px solid #251a1a;
+  width: 35vw;
+  position: absolute;
+  top: 80%; /* Adjust based on the icon's height */
+  right: 40%; /* Align with the hamburger icon */
+  border-radius: 14px;
+}
+
+.drop-menu a {
+  text-decoration: none;
+  color: rgb(221, 86, 86);
+  font-size: 2rem;
+}
+
+.drop-menu .menu-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+}
+
+.drop-menu .menu-item:last-child {
+  border-bottom: none; /* Remove border from the last item */
+}
+
+.drop-menu .menu-item:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+#arrow {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgb(204, 90, 14);
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  font-size: 3rem;
+  text-align: center;
+  color: rgb(223, 100, 18);
+  text-shadow: 0 -10px 0 orange, 0 -20px 0 rgb(238, 255, 0);
+  overflow: hidden;
+}
+
+div i {
+  animation: arrow 1.3s linear infinite;
+}
+
+@media (orientation: portrait) {
+  h3 span::after {
+    content: "\A";
+    white-space: pre;
+  }
+}
+
+@media (orientation: landscape) {
+  header {
+    background-position: right;
+    background-position-y: -50px;
+  }
+  header nav {
+    right: 6%;
+    top: 4%;
+  }
+  header hgroup {
+    top: 7%;
+    left: 4%;
+  }
+  header h3 {
+    max-width: 59%;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 500px) {
+  main article {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  article img {
+    padding: 15px;
+    width: 25%;
+  }
+
+  article p {
+    padding: 5px;
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 300px) {
+  main article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  article img {
+    max-width: 95vw;
+  }
+
+  article p {
+    padding: 15px;
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 600px) and (min-height: 600px) {
+  header {
+    background-position: top;
+    background-position-y: -200px;
+  }
+  header hgroup {
+    top: 60%;
+    left: 4%;
+  }
+  header h1 {
+    font-size: 5rem;
+  }
+  header h3 {
+    font-size: 3rem;
+  }
+
+  .drop-menu {
+    width: 20vw;
+  }
+
+  .drop-menu .menu-item:hover {
+    border-radius: 12px;
+  }
+  #arrow:hover {
+    box-shadow: 0 0 20px 10px rgba(223, 100, 18, 0.8);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(11px);
+  }
+  100% {
+    transform: translateY(24px);
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(-60px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(60px);
+  }
+}
