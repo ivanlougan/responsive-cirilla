@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Syncopate:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #382a2a;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Syncopate", serif;
+}
+
+div .btn {
+  position: absolute;
+  left: 4%;
+  top: 3%;
+  font-size: 1.1rem;
+  padding: 5px;
+  text-decoration: none;
+  width: 29vw;
+  background-color: beige;
+  border: 1px solid #251a1a;
+  text-align: center;
+}
+div .img-container {
+  padding: 40px 5px 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div img {
+  padding: 40px 5px 1px;
+}
+
+div h1 {
+  color: #d34c4c;
+  font-size: 3.5rem;
+  padding: 3px;
+}
+
+div p {
+  color: bisque;
+  font-size: 1.6rem;
+}
+div a {
+  color: #7c2121;
+  font-weight: bold;
+}
+
+@media (min-width: 600px) and (min-height: 600px) {
+  div .btn {
+    height: 5vh;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

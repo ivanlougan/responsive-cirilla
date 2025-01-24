@@ -59,6 +59,7 @@ main {
   position: relative;
   display: flex;
   align-items: center;
+  overflow: hidden;
   z-index: 2;
 }
 
@@ -194,6 +195,11 @@ div i {
     background-position: top;
     background-position-y: -200px;
   }
+
+  header nav {
+    cursor: pointer;
+  }
+
   header hgroup {
     top: 60%;
     left: 4%;
